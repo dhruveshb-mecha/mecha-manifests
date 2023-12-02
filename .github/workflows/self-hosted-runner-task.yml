@@ -1,0 +1,16 @@
+name: Create Text File
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - name: Create text file
+        run: |
+          mkdir hello_world
+          echo "hello world from self hosted runner" > hello_world/hello.txt
